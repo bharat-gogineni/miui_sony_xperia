@@ -1,8 +1,10 @@
 * Description
 
-	This repository is for MIUI CM9 on Sony Xperia Go.
+        Patchrom by munjeni
+
+	This repository is for MIUI CM9 on Sony Xperia P.
 	It is still a work in progress.
-	Curently suported device is Sony Xperia Go and Sony Xperia Sola
+	Curently suported device is Sony Xperia Go | Sony Xperia Sola | Sony Xperia P
 
 
 
@@ -29,6 +31,23 @@
  
 	$ ./makemiui.sh pepper 
 
+	To build MIUI for Sony Xperia P
+ 
+* Sony Xperia P
+
+   * Build MIUI CM9
+
+	Copy CM9 rom to the /root/miui_xperia/**DEVICE** and rename zip archive to stockrom.zip 
+
+	$ cd nypon
+        $ .makefile zip
+
+   * How To Build MIUI CM9 for Sony Xperia P
+
+	Make a workspace
+
+	$ cd ~
+	$ git clone git@github.com/dimon2242/miui_sony_xperia.git miui_xperia
 
 
 * Credit/Thanks
@@ -37,3 +56,4 @@
 	CyanogenMod team 
 	Micode team 
 	FXP
+        Munjeni

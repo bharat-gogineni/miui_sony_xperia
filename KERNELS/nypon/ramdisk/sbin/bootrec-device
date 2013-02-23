@@ -1,0 +1,19 @@
+#!/sbin/sh
+
+# trigger button-backlight
+echo '255' > /sys/class/leds/so34-led0/brightness
+echo '255' > /sys/class/leds/so34-led1/brightness
+echo '255' > /sys/class/leds/so34-led2/brightness
+echo '255' > /sys/class/leds/green/brightness
+echo '250' > /sys/class/leds/blue/brightness
+cat /dev/input/event1 > /dev/keycheck&
+sleep 3
+
+# trigger button-backlight
+echo '0' > /sys/class/leds/so34-led0/brightness
+echo '0' > /sys/class/leds/so34-led1/brightness
+echo '0' > /sys/class/leds/so34-led2/brightness
+echo '0' > /sys/class/leds/green/brightness
+echo '0' > /sys/class/leds/blue/brightness
+
+kill -9 $!
